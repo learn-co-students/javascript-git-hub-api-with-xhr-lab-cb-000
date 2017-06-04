@@ -21,12 +21,12 @@
     </style>
     </head>
     <body>
-    <form>
-      Username:<input type="text" id="username" name="username" />
-      <button type="submit" value="Submit" onclick="getRepositories()">Submit</button>
-    </form>
     <main id="main">
     </main>
+    <form onsubmit="getRepositories(); return false;">
+      <input type="text" id="username"><br>
+      <input type="submit">
+    </form>
     <div class="flexbox-container">
       <div>
         <h3>Repositories</h3>
