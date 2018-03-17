@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>JavaScript GitHub API with XHR</title>
-    <link rel="stylesheet" type="text/css" href="node_modules/mocha/mocha.css">
+    <!-- <link rel="stylesheet" type="text/css" href="node_modules/mocha/mocha.css"> -->
     <style>
        .flexbox-container {
          display: -ms-flex;
@@ -18,6 +18,8 @@
       .flexbox-container > div:first-child {
         margin-right: 20px;
       }
+
+      
     </style>
     </head>
     <body>
@@ -26,20 +28,59 @@
     <div class="flexbox-container">
       <div>
         <h3>Repositories</h3>
-        <div id="repositories"></div>
+        <form onsubmit="getRepositories()">
+          Github Username: <br>
+          <input type="text" id="username" required>
+          <input type="submit" value="Submit">
+        </form>
+        <div id="repositories">
+          <!--
+          <p><strong>javascript-xhr-lab</strong></p>
+          <p><a href="#">View on Github</a></p>
+          <p><a href="#" onclick="getCommits(this)">View Commits</a></p>
+          <p><a href="#" onclick="getBranches(this)">View Branches</a></p>
+
+          <p><strong>oo-tic-tac-toe</strong></p>
+          <p><a href="#">View on Github</a></p>
+          <p><a href="#" onclick="getCommits(this)">View Commits</a></p>
+          <p><a href="#" onclick="getBranches(this)">View Branches</a></p>
+          -->
+        </div>
       </div>
       <div>
         <h3>Details</h3>
-        <div id="details"></div>
+        <div id="details">
+
+          <div id="commits">
+            <!--
+            <h4>Commits:</h4>
+            <p><strong>Authors Github Username</strong><br>segersalex</p><br>
+            <p><strong>Authors Full Name</strong><br>Alex Segers</p><br>
+            <p><strong>Message</strong><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><br>
+            -->
+          </div>
+
+          <div id="branches">
+            <!--
+            <h4>Branches:</h4>
+            <p>master</p>
+            <p>rebase</p>
+            <p>alpha</p>
+            -->
+          </div>
+
+        </div>
       </div>
     </div>
     <script src="index.js"></script>
     <!-- Open this file and call `mocha.run()` in console to run tests -->
+    <!--
     <div id="mocha"></div>
     <script src="node_modules/mocha/mocha.js"></script>
     <script src="node_modules/expect/umd/expect.min.js"></script>
     <script src="node_modules/sinon/pkg/sinon.js"></script>
     <script>mocha.setup('bdd');</script>
     <script src="test/index-test.js"></script>
+    -->
   </body>
 </html>
