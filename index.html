@@ -18,6 +18,11 @@
       .flexbox-container > div:first-child {
         margin-right: 20px;
       }
+
+      #repositories ul {
+        padding-left: 0;
+      }
+
     </style>
     </head>
     <body>
@@ -25,7 +30,13 @@
     </main>
     <div class="flexbox-container">
       <div>
+        <form onsubmit="getRepositories(); return false">
+          <label for="username">Username</label>
+          <input type="text" id="username">
+          <input type="submit" value="submit">
+        </form>
         <h3>Repositories</h3>
+        <p id="user"></p>
         <div id="repositories"></div>
       </div>
       <div>
