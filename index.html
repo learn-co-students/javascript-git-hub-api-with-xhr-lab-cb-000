@@ -22,6 +22,11 @@
     </head>
     <body>
     <main id="main">
+      <h3>Github Repository searcher:</h3>
+      <form id="api-form" onsubmit="getRepositories();return false;">
+        <input type="text" id="username"><br>
+        <input type="submit">
+      </form>
     </main>
     <div class="flexbox-container">
       <div>
@@ -41,5 +46,8 @@
     <script src="node_modules/sinon/pkg/sinon.js"></script>
     <script>mocha.setup('bdd');</script>
     <script src="test/index-test.js"></script>
+    <script type="text/javascript">
+      mocha.run()
+    </script>
   </body>
 </html>
